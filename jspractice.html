@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS_Practice</title>
+	<link rel="stylesheet" type="text/css" href="D:\pw\site4\styles.css">
+</head>
+<body>
+
+  <div>
+    <h1>JavaScript Array Sort</h2>
+    <h2>Sort date:</h2>
+
+    <h2 id="demo"></h2>
+      <script>
+	     var array = [
+        {date: '2019.01.10' }, 
+        {date: '2015.11.05' },
+        {date: '2001.12.21' },
+        {date: '2022.01.11' },
+        {date: '1986.08.08' },
+      ];
+      displayArray();
+
+      displayArray('\n\n sort by date');
+      displayArray(array.sort(byDate));
+
+      function byDate(a, b) {
+        return new Date(b.date).valueOf() - new Date(a.date).valueOf(); 
+      }
+
+      function displayArray() {
+        document.getElementById("demo").innerHTML = 
+        array[0].date + "<br>" +
+        array[1].date + "<br>" +
+        array[2].date + "<br>" +
+        array[3].date + "<br>" +
+        array[4].date;
+
+      }
+      </script>
+  </div>
+  
+</body>
+</html>
